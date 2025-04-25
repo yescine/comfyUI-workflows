@@ -1,96 +1,7 @@
 {
-  "last_node_id": 15,
-  "last_link_id": 25,
+  "last_node_id": 20,
+  "last_link_id": 43,
   "nodes": [
-    {
-      "id": 8,
-      "type": "VAEDecode",
-      "pos": [
-        1464.2801513671875,
-        152.949951171875
-      ],
-      "size": [
-        210,
-        46
-      ],
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 7
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 8
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            21
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.18",
-        "Node name for S&R": "VAEDecode"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 13,
-      "type": "InpaintStitch",
-      "pos": [
-        1715.5296630859375,
-        152.67127990722656
-      ],
-      "size": [
-        315,
-        78
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "stitch",
-          "type": "STITCH",
-          "link": 25
-        },
-        {
-          "name": "inpainted_image",
-          "type": "IMAGE",
-          "link": 21
-        }
-      ],
-      "outputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "links": [
-            22,
-            23
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-inpaint-cropandstitch",
-        "ver": "1.0.0",
-        "Node name for S&R": "InpaintStitch"
-      },
-      "widgets_values": [
-        "bislerp"
-      ]
-    },
     {
       "id": 9,
       "type": "SaveImage",
@@ -103,13 +14,13 @@
         58
       ],
       "flags": {},
-      "order": 10,
+      "order": 12,
       "mode": 4,
       "inputs": [
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 22
+          "link": 40
         }
       ],
       "outputs": [],
@@ -148,58 +59,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 4,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        -208.1230010986328,
-        357.138427734375
-      ],
-      "size": [
-        315,
-        98
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            1
-          ],
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            3,
-            5
-          ],
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            8,
-            18
-          ],
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.18",
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "juggernautXL_versionXInpaint.safetensors"
-      ]
-    },
-    {
       "id": 12,
       "type": "InpaintModelConditioning",
       "pos": [
@@ -211,7 +70,7 @@
         138
       ],
       "flags": {},
-      "order": 6,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -232,12 +91,12 @@
         {
           "name": "pixels",
           "type": "IMAGE",
-          "link": 19
+          "link": 35
         },
         {
           "name": "mask",
           "type": "MASK",
-          "link": 20
+          "link": 36
         }
       ],
       "outputs": [
@@ -289,7 +148,7 @@
         104.73908233642578
       ],
       "flags": {},
-      "order": 4,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
@@ -318,49 +177,6 @@
       ]
     },
     {
-      "id": 10,
-      "type": "LoadImage",
-      "pos": [
-        -189.82485961914062,
-        559.8018798828125
-      ],
-      "size": [
-        315,
-        314
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            10
-          ],
-          "slot_index": 0
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": [
-            11
-          ],
-          "slot_index": 1
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.18",
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "clipspace/clipspace-mask-1608205.800000012.png [input]",
-        "image"
-      ]
-    },
-    {
       "id": 3,
       "type": "KSampler",
       "pos": [
@@ -374,7 +190,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 7,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -414,124 +230,13 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        42091826238906,
+        470805457294677,
         "randomize",
         40,
-        8,
-        "euler",
+        7,
+        "dpmpp_2m",
         "karras",
-        0.8
-      ]
-    },
-    {
-      "id": 14,
-      "type": "PreviewImage",
-      "pos": [
-        2057.126708984375,
-        116.9461441040039
-      ],
-      "size": [
-        362.8999938964844,
-        298.79998779296875
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 23
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.18",
-        "Node name for S&R": "PreviewImage"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 11,
-      "type": "InpaintCrop",
-      "pos": [
-        197.62677001953125,
-        550.43017578125
-      ],
-      "size": [
-        443.4000244140625,
-        314
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 10
-        },
-        {
-          "name": "mask",
-          "type": "MASK",
-          "link": 11
-        },
-        {
-          "name": "optional_context_mask",
-          "type": "MASK",
-          "shape": 7,
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "stitch",
-          "type": "STITCH",
-          "links": [
-            25
-          ],
-          "slot_index": 0
-        },
-        {
-          "name": "cropped_image",
-          "type": "IMAGE",
-          "links": [
-            19
-          ],
-          "slot_index": 1
-        },
-        {
-          "name": "cropped_mask",
-          "type": "MASK",
-          "links": [
-            20
-          ],
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-inpaint-cropandstitch",
-        "ver": "1.0.0",
-        "Node name for S&R": "InpaintCrop"
-      },
-      "widgets_values": [
-        20,
-        1,
-        true,
-        16,
-        false,
-        16,
-        "bicubic",
-        "forced size",
-        1024,
-        1024,
-        1,
-        512,
-        512,
-        768,
-        768,
-        32
+        0.85
       ]
     },
     {
@@ -546,7 +251,7 @@
         164.31304931640625
       ],
       "flags": {},
-      "order": 3,
+      "order": 4,
       "mode": 0,
       "inputs": [
         {
@@ -571,7 +276,338 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "orcs, camp fire, battlemap"
+        "orcs, camp fire,\nisometric view"
+      ]
+    },
+    {
+      "id": 14,
+      "type": "PreviewImage",
+      "pos": [
+        2158.97265625,
+        103.94448852539062
+      ],
+      "size": [
+        362.8999938964844,
+        298.79998779296875
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 39
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.18",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 16,
+      "type": "PreviewImage",
+      "pos": [
+        239.91143798828125,
+        725.4038696289062
+      ],
+      "size": [
+        218.47274780273438,
+        246
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 34
+        }
+      ],
+      "outputs": [],
+      "title": "Mask areak preview",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.18",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 19,
+      "type": "InpaintCropImproved",
+      "pos": [
+        -269.638671875,
+        563.649169921875
+      ],
+      "size": [
+        443.4000244140625,
+        410
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 41
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "shape": 7,
+          "link": 42
+        },
+        {
+          "name": "optional_context_mask",
+          "type": "MASK",
+          "shape": 7,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "stitcher",
+          "type": "STITCHER",
+          "links": [
+            37
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "cropped_image",
+          "type": "IMAGE",
+          "links": [
+            34,
+            35
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "cropped_mask",
+          "type": "MASK",
+          "links": [
+            36
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-inpaint-cropandstitch",
+        "ver": "2.1.4",
+        "Node name for S&R": "InpaintCropImproved"
+      },
+      "widgets_values": [
+        "bilinear",
+        "bicubic",
+        false,
+        "ensure minimum resolution",
+        1024,
+        1024,
+        16384,
+        16384,
+        true,
+        0,
+        false,
+        32,
+        0.1,
+        false,
+        1,
+        1,
+        1,
+        1,
+        1.2,
+        true,
+        512,
+        512,
+        "32"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        1464.2801513671875,
+        152.949951171875
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            38
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.18",
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 20,
+      "type": "InpaintStitchImproved",
+      "pos": [
+        1743.8858642578125,
+        155.33592224121094
+      ],
+      "size": [
+        352.79998779296875,
+        46
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "stitcher",
+          "type": "STITCHER",
+          "link": 37
+        },
+        {
+          "name": "inpainted_image",
+          "type": "IMAGE",
+          "link": 38
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            39,
+            40
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-inpaint-cropandstitch",
+        "ver": "2.1.4",
+        "Node name for S&R": "InpaintStitchImproved"
+      }
+    },
+    {
+      "id": 10,
+      "type": "LoadImage",
+      "pos": [
+        -680.7178344726562,
+        570.5148315429688
+      ],
+      "size": [
+        315,
+        314
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            41
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            42
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.18",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "clipspace/clipspace-mask-4231537.099999998.png [input]",
+        "image"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -249.7769775390625,
+        311.8492126464844
+      ],
+      "size": [
+        315,
+        98
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            3,
+            5
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            8,
+            18
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.18",
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "juggernautXL_versionXInpaint.safetensors"
       ]
     }
   ],
@@ -617,22 +653,6 @@
       "VAE"
     ],
     [
-      10,
-      10,
-      0,
-      11,
-      0,
-      "IMAGE"
-    ],
-    [
-      11,
-      10,
-      1,
-      11,
-      1,
-      "MASK"
-    ],
-    [
       12,
       6,
       0,
@@ -673,46 +693,6 @@
       "VAE"
     ],
     [
-      19,
-      11,
-      1,
-      12,
-      3,
-      "IMAGE"
-    ],
-    [
-      20,
-      11,
-      2,
-      12,
-      4,
-      "MASK"
-    ],
-    [
-      21,
-      8,
-      0,
-      13,
-      1,
-      "IMAGE"
-    ],
-    [
-      22,
-      13,
-      0,
-      9,
-      0,
-      "IMAGE"
-    ],
-    [
-      23,
-      13,
-      0,
-      14,
-      0,
-      "IMAGE"
-    ],
-    [
       24,
       12,
       2,
@@ -721,22 +701,86 @@
       "LATENT"
     ],
     [
-      25,
-      11,
+      34,
+      19,
+      1,
+      16,
       0,
-      13,
+      "IMAGE"
+    ],
+    [
+      35,
+      19,
+      1,
+      12,
+      3,
+      "IMAGE"
+    ],
+    [
+      36,
+      19,
+      2,
+      12,
+      4,
+      "MASK"
+    ],
+    [
+      37,
+      19,
       0,
-      "STITCH"
+      20,
+      0,
+      "STITCHER"
+    ],
+    [
+      38,
+      8,
+      0,
+      20,
+      1,
+      "IMAGE"
+    ],
+    [
+      39,
+      20,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      40,
+      20,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      41,
+      10,
+      0,
+      19,
+      0,
+      "IMAGE"
+    ],
+    [
+      42,
+      10,
+      1,
+      19,
+      1,
+      "MASK"
     ]
   ],
   "groups": [],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.116781577942483,
+      "scale": 0.6934334949441612,
       "offset": [
-        -470.8769188675738,
-        -32.60758069630296
+        819.967088881275,
+        49.51428622235609
       ]
     }
   },
